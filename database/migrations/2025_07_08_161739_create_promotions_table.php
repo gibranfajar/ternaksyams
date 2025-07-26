@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->text('description');
             $table->string('thumbnail');
-            $table->timestamp('start_date');
-            $table->timestamp('end_date');
+            $table->timestamp('start_date')->nullable();
+            $table->timestamp('end_date')->nullable();
             $table->enum('status', ['active', 'inactive']);
             $table->timestamps();
             $table->softDeletes();

@@ -23,8 +23,8 @@ return new class extends Migration
             $table->integer('quota');
             $table->integer('limit');
             $table->integer('used');
-            $table->timestamp('start_date');
-            $table->timestamp('end_date');
+            $table->timestamp('start_date')->nullable();
+            $table->timestamp('end_date')->nullable();
             $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
